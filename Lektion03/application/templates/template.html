@@ -10,7 +10,18 @@
 
     <div class="container text-center">
       <h1 class="">Bilder</h1>
+      <h3>Kalender</h3>
+      {{calender|safe}}
+      <h3>Data</h3>
       {{data|safe}}
+      <h3>Användare</h3>
+      {% if names %}
+<ul>
+{% for name in names %}
+    <li>{{ name|e }}</li>
+{% endfor %}
+</ul>
+{% endif %}
       <p>
         <br>
       </p>
